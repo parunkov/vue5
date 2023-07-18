@@ -19,9 +19,12 @@ const onClick = () => {
 
 <style lang="scss" scoped>
 .card {
+  width: 20%;
   padding: 5px;
   border: 1px solid black;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+  cursor: pointer;
   &.selected {
     background: black;
     color: white;
