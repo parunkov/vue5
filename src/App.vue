@@ -73,6 +73,11 @@ const leftData = ref([
 
 const onSelect = (event) => {
   console.log(event);
+  const cardData = leftData.value.find((item) => item.id === event.id);
+  const index = leftData.value.findIndex((item) => item.id === event.id);
+  cardData.selected = event.selected;
+  leftData.value[index] = cardData;
+  console.log(leftData.value);
 };
 </script>
 
@@ -89,7 +94,7 @@ const onSelect = (event) => {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: black;
   margin-top: 60px;
 }
 </style>

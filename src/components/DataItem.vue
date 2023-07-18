@@ -12,5 +12,19 @@ const onClick = () => {
 </script>
 
 <template>
-  <div :data="props.data" class="card" @click="onClick">{{ props.data.name }}</div>
+  <div :data="props.data" class="card" @click="onClick" :class="{ selected: props.data.selected }">
+    {{ props.data.name }}
+  </div>
 </template>
+
+<style lang="scss" scoped>
+.card {
+  padding: 5px;
+  border: 1px solid black;
+  margin-bottom: 5px;
+  &.selected {
+    background: black;
+    color: white;
+  }
+}
+</style>
