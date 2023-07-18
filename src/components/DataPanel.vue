@@ -17,7 +17,3 @@ const onSelect = (event) => {
     item.name
   }}</data-item>
 </template>
-
-<!-- <style lang="scss" scoped>
-
-</style> -->
