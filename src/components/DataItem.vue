@@ -1,12 +1,13 @@
 <script setup>
-import { defineProps } from 'vue';
+import { defineProps, defineEmits } from 'vue';
 
 const props = defineProps({
   data: Object,
 });
+const emit = defineEmits(['select']);
 
 const onClick = () => {
-  console.log(props.data.id);
+  emit('select', { id: props.data.id, selected: !props.data.selected });
 };
 </script>
 

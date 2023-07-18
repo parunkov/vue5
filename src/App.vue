@@ -70,12 +70,16 @@ const leftData = ref([
 //     name: 'Hoodie 4',
 //   },
 // ]);
+
+const onSelect = (event) => {
+  console.log(event);
+};
 </script>
 
 <template>
   <div class="container">
     <!-- <div v-for="item in leftData" :key="item.id" class="card">{{ item.name }}</div> -->
-    <data-panel :data="leftData" />
+    <data-panel :data="leftData" @select="onSelect" />
   </div>
 </template>
 
